@@ -155,6 +155,7 @@ on:
           - s922x-odroid-n2
           - s922x-reva
           - s922x-ugoos-am6
+          - s922x-oes-plus
           - seewo-sv21
           - smart-am40
           - smart-am60
