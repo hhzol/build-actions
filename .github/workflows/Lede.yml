@@ -23,7 +23,7 @@ on:
       CONFIG_FILE:
         description: '请选择配置文件'
         required: true
-        default: 'x86_64'
+        default: 'OES_Plus'
         type: choice
         options:
           - 'armsr_rootfs_tar_gz'
@@ -36,6 +36,7 @@ on:
           - 'x86_32'
           - 'x86_64'
           - 'xiaoyu_xy-c5'
+          - 'OES_Plus'
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
