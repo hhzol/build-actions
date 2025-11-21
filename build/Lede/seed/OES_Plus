@@ -42,6 +42,7 @@ CONFIG_PACKAGE_TAR_XZ=y
 CONFIG_PACKAGE_TAR_ZSTD=y
 CONFIG_PACKAGE_acpid=y
 CONFIG_PACKAGE_attr=y
+CONFIG_PACKAGE_auto-scripts=y
 CONFIG_PACKAGE_autosamba=y
 CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_brcmfmac-firmware-usb=y
@@ -49,8 +50,6 @@ CONFIG_PACKAGE_bsdtar=y
 CONFIG_PACKAGE_bzip2=y
 CONFIG_PACKAGE_chattr=y
 CONFIG_PACKAGE_chinadns-ng=y
-CONFIG_PACKAGE_coreutils=y
-CONFIG_PACKAGE_coreutils-base64=y
 CONFIG_PACKAGE_coreutils-dd=y
 CONFIG_PACKAGE_coreutils-df=y
 CONFIG_PACKAGE_coreutils-nohup=y
@@ -140,12 +139,10 @@ CONFIG_PACKAGE_libnl-core=y
 CONFIG_PACKAGE_libnl-genl=y
 CONFIG_PACKAGE_libopenssl-devcrypto=y
 CONFIG_PACKAGE_libparted=y
-CONFIG_PACKAGE_libpcap=y
 CONFIG_PACKAGE_libpython3=y
 CONFIG_PACKAGE_libreadline=y
 CONFIG_PACKAGE_libruby=y
 CONFIG_PACKAGE_libsensors=y
-CONFIG_PACKAGE_libstdcpp=y
 CONFIG_PACKAGE_libsysfs=y
 CONFIG_PACKAGE_liburcu=y
 CONFIG_PACKAGE_liburing=y
@@ -169,13 +166,11 @@ CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_luci-app-frps=y
 CONFIG_PACKAGE_luci-app-ksmbd=y
 # CONFIG_PACKAGE_luci-app-nlbwmon is not set
-CONFIG_PACKAGE_luci-app-openclash=y
 # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
 # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-webui is not set
 CONFIG_PACKAGE_luci-app-ttyd=y
 # CONFIG_PACKAGE_luci-app-upnp is not set
 # CONFIG_PACKAGE_luci-app-vsftpd is not set
-CONFIG_PACKAGE_luci-i18n-adguardhome-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-diskman-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-frps-zh-cn=y
@@ -226,7 +221,6 @@ CONFIG_PACKAGE_python3-ctypes=y
 CONFIG_PACKAGE_python3-light=y
 CONFIG_PACKAGE_python3-logging=y
 CONFIG_PACKAGE_python3-yaml=y
-CONFIG_PACKAGE_resolveip=y
 CONFIG_PACKAGE_ruby=y
 CONFIG_PACKAGE_ruby-bigdecimal=y
 CONFIG_PACKAGE_ruby-date=y
