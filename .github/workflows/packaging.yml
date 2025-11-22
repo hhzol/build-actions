@@ -22,7 +22,7 @@ on:
       amlogic_model:
         description: '选择机型'
         required: true
-        default: "s905d"
+        default: "s922x-oes-plus"
         type: choice
         options:
           - all
