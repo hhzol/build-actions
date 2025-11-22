@@ -118,7 +118,7 @@ jobs:
       
     - name: 设置环境变量LUCI_EDITION
       run: |
-        echo "LUCI_EDITION='master'" >> "${GITHUB_ENV}"
+        echo "LUCI_EDITION=master" >> "${GITHUB_ENV}"
        
     - name: 部署编译环境
       env:
