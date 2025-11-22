@@ -53,7 +53,7 @@ jobs:
       
     - name: Replace LUCI_EDITION in common.sh
       run: |
-        sed -i 's/variable LUCI_EDITION="23.05"/variable LUCI_EDITION="master"/' "/tmp/common/common.sh"
+        sed -i 's/variable LUCI_EDITION="23.05"/variable LUCI_EDITION="master"/' "${GITHUB_WORKSPACE}/tmp/common/common.sh"
         
     - name: 部署编译环境
       env:
