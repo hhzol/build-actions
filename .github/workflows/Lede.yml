@@ -150,6 +150,7 @@ jobs:
       run: |
         cd "${HOME_PATH}"
         git clone https://github.com/sbwml/luci-app-alist package/alist
+        ./scripts/feeds install -a > /dev/null 2>&1
  
     - name: 运行其他和SSH远程(make menuconfig)
       id: info
