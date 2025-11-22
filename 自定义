@@ -1,0 +1,14 @@
+    - name: Amend GITHUB_ENV for Lede
+      if: env.SOURCE == 'Lede'
+      run: |
+        echo "LUCI_EDITION=master" >> "$GITHUB_ENV"
+        echo "GENE_PATH=/home/runner/work/build-actions/build-actions/openwrt/package/base-files/files/bin/config_generate" >> "$GITHUB_ENV"
+       
+    - name: Verify GITHUB_ENV for Lede
+      run: |
+        echo "LUCI_EDITION = $LUCI_EDITION"
+        echo "GENE_PATH = $GENE_PATH"
+
+    - name: Replace of the background jpg
+      run: |
+        curl -fsSL https://raw.githubusercontent.com/zhtcl/openwrt-package/usb/argon/jpg/10.jpg -o ${HOME_PATH}/files/www/luci-static/argon/background/argon.jpg
