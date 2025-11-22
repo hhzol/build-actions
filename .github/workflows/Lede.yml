@@ -120,7 +120,7 @@ jobs:
       if: env.SOURCE == 'Lede'
       run: |
         echo "LUCI_EDITION=master" >> "$GITHUB_ENV"
-        echo "GENE_PATH=/home/runner/work/build-actions/build-actions/openwrt/package/base-files/files/bin/config_generate" >> "$GITHUB_ENV"
+        echo "GENE_PATH=${HOME_PATH}/package/base-files/files/bin/config_generate" >> "$GITHUB_ENV"
        
     - name: 部署编译环境
       env:
@@ -149,10 +149,6 @@ jobs:
     - name: 运行其他和SSH远程(make menuconfig)
       id: info
       uses: 281677160/common@need
-
-    - name: Replace of the background jpg
-      run: |
-        curl -fsSL https://raw.githubusercontent.com/zhtcl/openwrt-package/usb/argon/jpg/10.jpg -o ${HOME_PATH}/files/www/luci-static/argon/background/argon.jpg
 
     - name: 编译信息
       continue-on-error: true
