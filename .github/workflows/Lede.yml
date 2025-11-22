@@ -119,8 +119,8 @@ jobs:
     - name: Amend GITHUB_ENV for Lede
       if: env.SOURCE == 'Lede'
       run: |
-        echo "LUCI_EDITION=master" >> "$GITHUB_ENV"
-        echo "GENE_PATH=${HOME_PATH}/package/base-files/files/bin/config_generate" >> "$GITHUB_ENV"
+        echo "LUCI_EDITION=master" >> "${GITHUB_ENV}"
+        echo "GENE_PATH=${HOME_PATH}/package/base-files/files/bin/config_generate" >> "${GITHUB_ENV}"
        
     - name: 部署编译环境
       env:
