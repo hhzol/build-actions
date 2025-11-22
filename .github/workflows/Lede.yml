@@ -116,7 +116,7 @@ jobs:
     - name: 检测密匙/文件/版本
       uses: 281677160/common@mishi
       
-    - name: Set GITHUB_ENV for Lede
+    - name: Amend GITHUB_ENV for Lede
       if: env.SOURCE == 'Lede'
       run: |
         echo "LUCI_EDITION=master" >> "$GITHUB_ENV"
@@ -154,20 +154,6 @@ jobs:
       run: |
         curl -fsSL https://raw.githubusercontent.com/zhtcl/openwrt-package/usb/argon/jpg/10.jpg -o ${HOME_PATH}/files/www/luci-static/argon/background/argon.jpg
 
-    - name: replace of hostname & ip address
-      run: |
-        CONFIG_FILE="${HOME_PATH}/package/base-files/files/bin/config_generate"
-
-        echo "修改 hostname ..."
-        sed -i "s/set system.@system\[-1\].hostname='LEDE'/set system.@system[-1].hostname='OpenWrt'/" "$CONFIG_FILE"
-
-        echo "修改 LAN IP ..."
-        sed -i 's/lan) ipad=${ipaddr:-"192\.168\.1\.1"} ;;/lan) ipad=${ipaddr:-"192.168.10.2"} ;;/' "$CONFIG_FILE"
-
-        echo "修改完成："
-        grep "hostname" "$CONFIG_FILE"
-        grep "ipad" "$CONFIG_FILE"
-  
     - name: 编译信息
       continue-on-error: true
       if: env.COMPILATION_INFORMATION == 'true'
