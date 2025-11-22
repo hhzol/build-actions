@@ -146,12 +146,6 @@ jobs:
       continue-on-error: true
       uses: 281677160/common@message
 
-    - name: Clone luci-app-alist
-      run: |
-        cd "${HOME_PATH}"
-        git clone https://github.com/sbwml/luci-app-alist package/alist
-        ./scripts/feeds install -a > /dev/null 2>&1
- 
     - name: 运行其他和SSH远程(make menuconfig)
       id: info
       uses: 281677160/common@need
