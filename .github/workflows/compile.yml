@@ -51,10 +51,10 @@ jobs:
     - name: 检测密匙/文件/版本
       uses: 281677160/common@mishi
       
-    - name: Replace LUCI_EDITION in common.sh
+    - name: 设置环境变量LUCI_EDITION
       run: |
-        sed -i 's/variable LUCI_EDITION="23.05"/variable LUCI_EDITION="master"/' "${GITHUB_WORKSPACE}/tmp/common/common.sh"
-        
+        echo "LUCI_EDITION='master'" >> "${GITHUB_ENV}"
+               
     - name: 部署编译环境
       env:
         DEBIAN_FRONTEND: noninteractive
