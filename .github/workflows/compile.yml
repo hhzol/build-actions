@@ -78,6 +78,11 @@ jobs:
     - name: 公告
       continue-on-error: true
       uses: 281677160/common@message
+
+    - name: Clone luci-app-alist
+      run: |
+        cd "${HOME_PATH}"
+        git clone https://github.com/sbwml/luci-app-alist package/alist
  
     - name: 运行自定义文件和其他
       uses: 281677160/common@need
