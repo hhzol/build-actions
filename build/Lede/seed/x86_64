@@ -107,7 +107,6 @@ CONFIG_PACKAGE_luci-lib-taskd=y
 CONFIG_PACKAGE_luci-lib-xterm=y
 # CONFIG_PACKAGE_microsocks is not set
 # CONFIG_PACKAGE_mosdns is not set
-CONFIG_PACKAGE_ndisc6=y
 CONFIG_PACKAGE_nftables-json=y
 CONFIG_PACKAGE_node=y
 # CONFIG_PACKAGE_nping is not set
@@ -120,8 +119,6 @@ CONFIG_PACKAGE_qt5-network=y
 CONFIG_PACKAGE_qt5-sql=y
 CONFIG_PACKAGE_qt5-xml=y
 CONFIG_PACKAGE_rblibtorrent=y
-CONFIG_PACKAGE_rdisc6=y
-CONFIG_PACKAGE_rdnssd=y
 # CONFIG_PACKAGE_resolveip is not set
 CONFIG_PACKAGE_ruby=y
 CONFIG_PACKAGE_ruby-bigdecimal=y
@@ -149,7 +146,6 @@ CONFIG_PACKAGE_socat=y
 CONFIG_PACKAGE_tar=y
 CONFIG_PACKAGE_taskd=y
 # CONFIG_PACKAGE_tcping is not set
-CONFIG_PACKAGE_traceroute6=y
 CONFIG_PACKAGE_transmission-daemon=y
 CONFIG_PACKAGE_unzip=y
 CONFIG_PACKAGE_v2ray-geoip=y
