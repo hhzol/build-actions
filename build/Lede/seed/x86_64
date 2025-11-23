@@ -93,8 +93,6 @@ CONFIG_PACKAGE_luci-app-adguardhome=y
 CONFIG_PACKAGE_luci-app-homeproxy=y
 CONFIG_PACKAGE_luci-app-iperf3-server=y
 CONFIG_PACKAGE_luci-app-openclash=y
-CONFIG_PACKAGE_luci-app-qbittorrent=y
-CONFIG_PACKAGE_luci-app-qfirehose=m
 CONFIG_PACKAGE_luci-app-smartdns=y
 # CONFIG_PACKAGE_luci-app-ssr-plus is not set
 CONFIG_PACKAGE_luci-app-transmission=y
@@ -103,8 +101,6 @@ CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 # CONFIG_PACKAGE_luci-app-wol is not set
 CONFIG_PACKAGE_luci-i18n-homeproxy-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-iperf3-server-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-qfirehose-zh-cn=m
 CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-transmission-zh-cn=y
 CONFIG_PACKAGE_luci-lib-taskd=y
