@@ -50,13 +50,7 @@ jobs:
 
     - name: 检测密匙/文件/版本
       uses: 281677160/common@mishi
-      
-    - name: Amend GITHUB_ENV for Lede
-      if: env.SOURCE == 'Lede'
-      run: |
-        echo "LUCI_EDITION=master" >> "${GITHUB_ENV}"
-        echo "GENE_PATH=${HOME_PATH}/package/base-files/files/bin/config_generate" >> "${GITHUB_ENV}"
-        
+            
     - name: 部署编译环境
       env:
         DEBIAN_FRONTEND: noninteractive
@@ -69,8 +63,6 @@ jobs:
     - name: 下载"${{matrix.target}}"源码
       working-directory: /${{ env.DIY_WORK }}
       run: |
-        echo "LUCI_EDITION = $LUCI_EDITION"
-        echo "GENE_PATH = $GENE_PATH"
         git clone -q -b "${REPO_BRANCH}" --single-branch "${REPO_URL}" openwrt
         ln -sf /${{ env.DIY_WORK }}/openwrt ${GITHUB_WORKSPACE}/openwrt
         bash ${{ env.COMMON_SH }} Diy_feedsconf
@@ -92,10 +84,6 @@ jobs:
       if: env.COMPILATION_INFORMATION == 'true'
       uses: 281677160/common@message
     
-    - name: Replace of the background jpg
-      run: |
-        curl -fsSL https://raw.githubusercontent.com/zhtcl/openwrt-package/usb/argon/jpg/10.jpg -o ${HOME_PATH}/files/www/luci-static/argon/background/argon.jpg
- 
     - name: 缓存加速
       if: env.CACHEWRTBUILD_SWITCH == 'true'
       uses: stupidloud/cachewrtbuild@main
