@@ -5,10 +5,20 @@ CONFIG_ARIA2_BITTORRENT=y
 CONFIG_ARIA2_NOXML=y
 CONFIG_ARIA2_OPENSSL=y
 CONFIG_ARIA2_WEBSOCKET=y
+CONFIG_DOCKER_OPTIONAL_FEATURES=y
 CONFIG_GRUB_IMAGES=y
 CONFIG_IB=y
 CONFIG_IB_STANDALONE=y
 CONFIG_IMAGEOPT=y
+CONFIG_KERNEL_CFQ_GROUP_IOSCHED=y
+CONFIG_KERNEL_CGROUP_HUGETLB=y
+CONFIG_KERNEL_CGROUP_PERF=y
+CONFIG_KERNEL_HUGETLBFS=y
+CONFIG_KERNEL_HUGETLB_PAGE=y
+CONFIG_KERNEL_MEMCG_SWAP_ENABLED=y
+CONFIG_KERNEL_PERF_EVENTS=y
+CONFIG_KERNEL_TRANSPARENT_HUGEPAGE=y
+CONFIG_KERNEL_TRANSPARENT_HUGEPAGE_ALWAYS=y
 CONFIG_MAKE_TOOLCHAIN=y
 CONFIG_PACKAGE_TAR_BZIP2=y
 CONFIG_PACKAGE_TAR_GZIP=y
@@ -16,6 +26,7 @@ CONFIG_PACKAGE_TAR_POSIX_ACL=y
 CONFIG_PACKAGE_TAR_XATTR=y
 CONFIG_PACKAGE_TAR_XZ=y
 CONFIG_PACKAGE_TAR_ZSTD=y
+CONFIG_PACKAGE_acme=y
 CONFIG_PACKAGE_amule=y
 CONFIG_PACKAGE_aria2=y
 CONFIG_PACKAGE_auto-scripts=y
@@ -26,7 +37,14 @@ CONFIG_PACKAGE_boost-random=y
 CONFIG_PACKAGE_boost-system=y
 CONFIG_PACKAGE_bzip2=y
 CONFIG_PACKAGE_chinadns-ng=y
-# CONFIG_PACKAGE_coreutils-base64 is not set
+CONFIG_PACKAGE_collectd=y
+CONFIG_PACKAGE_collectd-mod-cpu=y
+CONFIG_PACKAGE_collectd-mod-interface=y
+CONFIG_PACKAGE_collectd-mod-iwinfo=y
+CONFIG_PACKAGE_collectd-mod-load=y
+CONFIG_PACKAGE_collectd-mod-memory=y
+CONFIG_PACKAGE_collectd-mod-network=y
+CONFIG_PACKAGE_collectd-mod-rrdtool=y
 CONFIG_PACKAGE_coreutils-nohup=y
 CONFIG_PACKAGE_coreutils-stty=y
 CONFIG_PACKAGE_ddns-scripts-cloudflare=y
@@ -35,8 +53,6 @@ CONFIG_PACKAGE_ddns-scripts-dnspod=y
 CONFIG_PACKAGE_ddns-scripts-godaddy=y
 CONFIG_PACKAGE_ddns-scripts-huaweicloud=y
 CONFIG_PACKAGE_debugfs=m
-# CONFIG_PACKAGE_dns2socks is not set
-# CONFIG_PACKAGE_dns2tcp is not set
 # CONFIG_PACKAGE_etherwake is not set
 CONFIG_PACKAGE_firewall=m
 CONFIG_PACKAGE_firewall4=y
@@ -44,8 +60,13 @@ CONFIG_PACKAGE_geoview=y
 CONFIG_PACKAGE_giflib-utils=y
 CONFIG_PACKAGE_haproxy=y
 CONFIG_PACKAGE_iperf3=y
+CONFIG_PACKAGE_iputils-arping=y
 CONFIG_PACKAGE_jansson=y
+CONFIG_PACKAGE_kmod-crypto-acompress=y
 CONFIG_PACKAGE_kmod-inet-diag=y
+CONFIG_PACKAGE_kmod-ipt-physdev=y
+CONFIG_PACKAGE_kmod-lib-lzo=y
+CONFIG_PACKAGE_kmod-lib-zlib-deflate=y
 CONFIG_PACKAGE_kmod-netlink-diag=y
 CONFIG_PACKAGE_kmod-nft-core=y
 CONFIG_PACKAGE_kmod-nft-fib=y
@@ -77,39 +98,64 @@ CONFIG_PACKAGE_libminiupnpc=y
 CONFIG_PACKAGE_libnatpmp=y
 CONFIG_PACKAGE_libnetsnmp=y
 CONFIG_PACKAGE_libnftnl=y
-# CONFIG_PACKAGE_libpcap is not set
 CONFIG_PACKAGE_libpcre2-16=y
 CONFIG_PACKAGE_libpng=y
+CONFIG_PACKAGE_librrd1=y
 CONFIG_PACKAGE_libruby=y
-# CONFIG_PACKAGE_libuci-lua is not set
-# CONFIG_PACKAGE_libudns is not set
 CONFIG_PACKAGE_libupnp=y
 CONFIG_PACKAGE_libwxbase=y
 CONFIG_PACKAGE_libyaml=y
 CONFIG_PACKAGE_libzstd=y
-# CONFIG_PACKAGE_lua-neturl is not set
+CONFIG_PACKAGE_luci-app-acme=y
 CONFIG_PACKAGE_luci-app-adguardhome=y
+CONFIG_PACKAGE_luci-app-amule=y
+CONFIG_PACKAGE_luci-app-argon-config=y
+CONFIG_PACKAGE_luci-app-aria2=y
 # CONFIG_PACKAGE_luci-app-arpbind is not set
+CONFIG_PACKAGE_luci-app-dockerman=y
 CONFIG_PACKAGE_luci-app-homeproxy=y
 CONFIG_PACKAGE_luci-app-iperf3-server=y
+CONFIG_PACKAGE_luci-app-mosdns=y
 CONFIG_PACKAGE_luci-app-openclash=y
+CONFIG_PACKAGE_luci-app-passwall2=y
+CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Haproxy=y
+CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_ShadowsocksR_Libev_Client=y
+CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Libev_Client=y
+CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Shadowsocks_Rust_Client=y
+CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_Simple_Obfs=y
+CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_SingBox=y
+CONFIG_PACKAGE_luci-app-passwall2_INCLUDE_V2ray_Plugin=y
+CONFIG_PACKAGE_luci-app-pushbot=y
+CONFIG_PACKAGE_luci-app-qbittorrent=y
+CONFIG_PACKAGE_luci-app-ramfree=y
 CONFIG_PACKAGE_luci-app-smartdns=y
-# CONFIG_PACKAGE_luci-app-ssr-plus is not set
+CONFIG_PACKAGE_luci-app-socat=y
+CONFIG_PACKAGE_luci-app-statistics=y
 CONFIG_PACKAGE_luci-app-transmission=y
+CONFIG_PACKAGE_luci-app-uhttpd=y
 CONFIG_PACKAGE_luci-app-unblockneteasemusic=y
 # CONFIG_PACKAGE_luci-app-upnp is not set
+# CONFIG_PACKAGE_luci-app-vsftpd is not set
 # CONFIG_PACKAGE_luci-app-wol is not set
+CONFIG_PACKAGE_luci-i18n-acme-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-amule-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-homeproxy-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-iperf3-server-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-mosdns-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-passwall2-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-qbittorrent-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ramfree-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-smartdns-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-socat-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-statistics-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-transmission-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-uhttpd-zh-cn=y
 CONFIG_PACKAGE_luci-lib-taskd=y
 CONFIG_PACKAGE_luci-lib-xterm=y
-# CONFIG_PACKAGE_microsocks is not set
-# CONFIG_PACKAGE_mosdns is not set
 CONFIG_PACKAGE_nftables-json=y
 CONFIG_PACKAGE_node=y
-# CONFIG_PACKAGE_nping is not set
 CONFIG_PACKAGE_openssh-sftp-server=y
 CONFIG_PACKAGE_p910nd=y
 CONFIG_PACKAGE_qbittorrent=y
@@ -119,7 +165,7 @@ CONFIG_PACKAGE_qt5-network=y
 CONFIG_PACKAGE_qt5-sql=y
 CONFIG_PACKAGE_qt5-xml=y
 CONFIG_PACKAGE_rblibtorrent=y
-# CONFIG_PACKAGE_resolveip is not set
+CONFIG_PACKAGE_rrdtool1=y
 CONFIG_PACKAGE_ruby=y
 CONFIG_PACKAGE_ruby-bigdecimal=y
 CONFIG_PACKAGE_ruby-date=y
@@ -132,26 +178,19 @@ CONFIG_PACKAGE_ruby-yaml=y
 CONFIG_PACKAGE_script-utils=y
 CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
 CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
-# CONFIG_PACKAGE_shadowsocks-libev-ss-server is not set
-# CONFIG_PACKAGE_shadowsocks-rust-sslocal is not set
-# CONFIG_PACKAGE_shadowsocksr-libev-ssr-check is not set
-# CONFIG_PACKAGE_shadowsocksr-libev-ssr-local is not set
-# CONFIG_PACKAGE_shadowsocksr-libev-ssr-redir is not set
-# CONFIG_PACKAGE_shadowsocksr-libev-ssr-server is not set
-# CONFIG_PACKAGE_simple-obfs-client is not set
 CONFIG_PACKAGE_sing-box=y
 CONFIG_PACKAGE_smartdns=y
 CONFIG_PACKAGE_snmpd=y
 CONFIG_PACKAGE_socat=y
 CONFIG_PACKAGE_tar=y
 CONFIG_PACKAGE_taskd=y
-# CONFIG_PACKAGE_tcping is not set
 CONFIG_PACKAGE_transmission-daemon=y
 CONFIG_PACKAGE_unzip=y
+CONFIG_PACKAGE_v2dat=y
 CONFIG_PACKAGE_v2ray-geoip=y
 CONFIG_PACKAGE_v2ray-geosite=y
 CONFIG_PACKAGE_v2ray-plugin=y
-# CONFIG_PACKAGE_xray-core is not set
+# CONFIG_PACKAGE_vsftpd-alt is not set
 CONFIG_PACKAGE_xz=y
 CONFIG_PACKAGE_xz-utils=y
 # CONFIG_PER_FEED_REPO is not set
@@ -178,6 +217,7 @@ CONFIG_PACKAGE_kmod-ipt-conntrack-extra=y
 CONFIG_PACKAGE_kmod-ipt-fullconenat=y
 CONFIG_PACKAGE_kmod-ipt-iprange=y
 CONFIG_PACKAGE_kmod-ipt-socket=y
+# CONFIG_PACKAGE_luci-app-passwall2_Nftables_Transparent_Proxy is not set
 CONFIG_PACKAGE_luci-app-ssr-plus_Iptables_Transparent_Proxy=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_Nftables_Transparent_Proxy is not set
 CONFIG_PACKAGE_miniupnpd=y
