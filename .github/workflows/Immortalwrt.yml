@@ -29,7 +29,7 @@ on:
         type: choice
         options:
           - 'x86_64'
-          - 'E2S'
+          - 'R2S'
           - 'OES_Plus'
           - 'armsr_rootfs_tar_gz'
       INFORMATION_NOTICE:
