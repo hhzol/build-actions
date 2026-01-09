@@ -70,11 +70,15 @@ on:
         default: 'true'
         type: boolean
       UPDATE_FIRMWARE_ONLINE:
-        description: '在线更新固/打包aarch64系列为img固件'
+        description: '在线更新固件/打包aarch64系列为img固件'
         required: false
         default: 'true'
         type: boolean
-
+      ONLINE_FIRMWARE:
+        description: '打包晶晨固件'
+        required: false
+        default: 'false'
+        type: boolean     
 
 # 如若启动定时编译的话,配置文件是设置对应文件夹内的settings.ini文件
 # 定时触发开启开始编译(把下面两个#去掉开启,时间设置请看定时开启编译说明)
