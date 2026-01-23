@@ -33,6 +33,9 @@ jobs:
        target: [Immortalwrt]
 
     steps:
+    - name: checkout
+      uses: actions/checkout@v4
+      
     - name: 释放Ubuntu磁盘空间
       uses: danshui-git/free-disk-space@main
       with:
@@ -51,16 +54,12 @@ jobs:
         df -h /tmp
         du -sh ${{ github.workspace }}/openwrt || true
 
-    - name: 缓存后磁盘占用
+    - name: 设置 TMPDIR 防止 /tmp 爆满
       run: |
-        df -h
-        df -h /tmp
-        du -sh ${{ github.workspace }}/openwrt || true
-        du -sh ${{ github.workspace }}/openwrt/tmp ${{ github.workspace }}/openwrt/build_dir ${{ github.workspace }}/openwrt/staging_dir 2>/dev/null || true
-
-        
-    - name: 准备结束
-      uses: actions/checkout@v4
+        mkdir -p $GITHUB_WORKSPACE/tmp
+        echo "TMPDIR=$GITHUB_WORKSPACE/tmp" >> $GITHUB_ENV
+        echo "TEMP=$GITHUB_WORKSPACE/tmp" >> $GITHUB_ENV
+        echo "TMP=$GITHUB_WORKSPACE/tmp" >> $GITHUB_ENV
 
     - name: 检测密匙/文件/版本
       uses: hhzol/common@mishi
