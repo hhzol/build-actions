@@ -44,6 +44,20 @@ jobs:
         remove_docker_image: true
         remove_packages: "azure-cli google-cloud-cli microsoft-edge-stable google-chrome-stable firefox postgresql* temurin-* *llvm* mysql* dotnet-sdk-*"
         remove_folders: "/usr/share/swift /usr/share/miniconda /usr/share/az* /usr/share/glade* /usr/local/lib/node_modules /usr/local/share/chromium /usr/local/share/powershell"
+
+    - name: 缓存前磁盘占用
+      run: |
+        df -h
+        df -h /tmp
+        du -sh ${{ github.workspace }}/openwrt || true
+
+    - name: 缓存后磁盘占用
+      run: |
+        df -h
+        df -h /tmp
+        du -sh ${{ github.workspace }}/openwrt || true
+        du -sh ${{ github.workspace }}/openwrt/tmp ${{ github.workspace }}/openwrt/build_dir ${{ github.workspace }}/openwrt/staging_dir 2>/dev/null || true
+
         
     - name: 准备结束
       uses: actions/checkout@v4
