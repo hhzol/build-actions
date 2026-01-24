@@ -33,9 +33,6 @@ jobs:
        target: [Immortalwrt]
 
     steps:
-    - name: checkout
-      uses: actions/checkout@v4
-      
     - name: 释放Ubuntu磁盘空间
       uses: danshui-git/free-disk-space@main
       with:
@@ -48,18 +45,8 @@ jobs:
         remove_packages: "azure-cli google-cloud-cli microsoft-edge-stable google-chrome-stable firefox postgresql* temurin-* *llvm* mysql* dotnet-sdk-*"
         remove_folders: "/usr/share/swift /usr/share/miniconda /usr/share/az* /usr/share/glade* /usr/local/lib/node_modules /usr/local/share/chromium /usr/local/share/powershell"
 
-    - name: 缓存前磁盘占用
-      run: |
-        df -h
-        df -h /tmp
-        du -sh ${{ github.workspace }}/openwrt || true
-
-    - name: 设置 TMPDIR 防止 /tmp 爆满
-      run: |
-        mkdir -p $GITHUB_WORKSPACE/tmp
-        echo "TMPDIR=$GITHUB_WORKSPACE/tmp" >> $GITHUB_ENV
-        echo "TEMP=$GITHUB_WORKSPACE/tmp" >> $GITHUB_ENV
-        echo "TMP=$GITHUB_WORKSPACE/tmp" >> $GITHUB_ENV
+    - name: 准备结束
+      uses: actions/checkout@v4
 
     - name: 检测密匙/文件/版本
       uses: hhzol/common@mishi
