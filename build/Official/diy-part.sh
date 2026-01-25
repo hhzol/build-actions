@@ -64,7 +64,8 @@ export amlogic_kernel="6.1.120_6.12.15"
 export auto_kernel="true"
 export rootfs_size="512/2560"
 export kernel_usage="stable"
-
+#修正rust
+export LLVM_DOWNLOAD_CI_LLVM=if-unchanged
 
 # 修改插件名字
 grep -rl '"终端"' . | xargs -r sed -i 's?"终端"?"TTYD"?g'
