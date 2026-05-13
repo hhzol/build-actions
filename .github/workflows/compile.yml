@@ -105,7 +105,10 @@ jobs:
       if: steps.package.outcome == 'success'
       run: |
         cd openwrt
-
+        export RUSTC_WRAPPER=/usr/bin/sccache
+        export SCCACHE_DIR=/openwrt/.sccache
+        which sccache
+        sccache --version
         echo -e "$(nproc) thread compile"
         make -j$(nproc) || make -j1 V=s
 
