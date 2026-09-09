@@ -163,4 +163,4 @@ jobs:
         
     - name: 触发启动"${{ matrix.target }}"开始编译
       if: steps.info.outcome == 'success'
-      uses: 281677160/common@trigger
+      uses: hhzol/common@trigger
