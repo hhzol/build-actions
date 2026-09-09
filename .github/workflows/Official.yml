@@ -134,16 +134,16 @@ jobs:
     
     - name: 公告
       continue-on-error: true
-      uses: 281677160/common@message
+      uses: hhzol/common@message
  
     - name: 运行其他和SSH远程(make menuconfig)
       id: info
-      uses: 281677160/common@need
+      uses: hhzol/common@need
         
     - name: 编译信息
       continue-on-error: true
       if: env.COMPILATION_INFORMATION == 'true'
-      uses: 281677160/common@message
+      uses: hhzol/common@message
     
     - name: 清理releases和workflows
       continue-on-error: true
