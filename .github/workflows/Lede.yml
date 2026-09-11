@@ -139,9 +139,9 @@ jobs:
       continue-on-error: true
       uses: 281677160/common@message
 
-#    - name: 运行其他和SSH远程(make menuconfig)
-#      id: info
-#      uses: 281677160/common@need
+    - name: 运行其他和SSH远程(make menuconfig)
+      id: info
+      uses: hhzol/common@need
 
     - name: 编译信息
       continue-on-error: true
