@@ -298,7 +298,7 @@ jobs:
 
     - name: 自动打包armsr_rootfs_tar_gz
       id: compile
-      uses: 281677160/common@aarch
+      uses: hhzol/common@aarch
 
     - name: 上传,发布
       if: steps.compile.outcome == 'success'
