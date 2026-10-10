@@ -221,7 +221,7 @@ env:
 jobs:
   build:
     name: 打包armsr_rootfs_tar_gz
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
     - name: 释放Ubuntu磁盘空间
       uses: danshui-git/free-disk-space@main
