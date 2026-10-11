@@ -179,7 +179,7 @@ on:
       amlogic_kernel:
         description: '输入内核,比如：6.1.120 或 6.1.120_6.12.15'
         required: true
-        default: '6.1.120_6.12.15'
+        default: '6.1.120_6.18.199'
       kernel_usage:
         description: "选择内核仓库"
         required: true
