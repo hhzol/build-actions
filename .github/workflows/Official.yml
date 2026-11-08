@@ -35,6 +35,7 @@ on:
           - 'x86_64'
           - 'r2s'
           - 'OES_Plus'
+          - 'onecloud'
       INFORMATION_NOTICE:
         description: 'Telegram或pushplus信息通知'
         required: true
